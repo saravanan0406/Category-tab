@@ -57,25 +57,13 @@ function createCard(product, discount) {
 var img = document.getElementById("image")
 var img1 = document.getElementById("image1")
 var img2 = document.getElementById("image2")
-var collection = document.getElementById("collection")
 
+btn2.addEventListener('click',function(){
+    img.style.display="none";
+    img1.style.display="inline";
+})
 
-function showicon() {
-    img.style.display = "inline";
-    img1.style.display = "none";
-    img2.style.display = "none";
-}
-
-
-
-function showicon1() {
-    img1.style.display = "inline";
-    img2.style.display = "none";
-    img.style.display = "none";
-}
-
-function showicon2() {
-    img2.style.display = "inline";
-    img1.style.display = "none";
-    img.style.display = "none";
-}
+btn3.addEventListener('click',function(){
+    img1.style.display="none";
+    img2.style.display="inline";
+})
