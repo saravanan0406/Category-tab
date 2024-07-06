@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+:root {
+    --primary-color: white;
+    --secondary-color: black;
+}
+
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: rgba(#e6eef9, 0.5);
+}
+
+.container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.tabs {
+    display: flex;
+    position: relative;
+    background: #F2F2F2;
+    height: 40px;
+    top: 90px;
+    border-radius: 5px;
+
+    * {
+        z-index: 2;
+    }
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 200px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.15s ease-in;
+}
+
+input[type="radio"] {
+    &:checked {
+        &+label {
+            color: var(--primary-color);
+        }
+    }
+}
+
+input[id="radio-1"] {
+    &:checked {
+        &~.glider {
+            transform: translateX(0);
+        }
+    }
+}
+
+input[id="radio-2"] {
+    &:checked {
+        &~.glider {
+            transform: translateX(100%);
+        }
+    }
+}
+
+input[id="radio-3"] {
+    &:checked {
+        &~.glider {
+            transform: translateX(200%);
+        }
+    }
+}
+
+.glider {
+    position: absolute;
+    display: flex;
+    height: 40px;
+    width: 200px;
+    background-color: var(--secondary-color);
+    z-index: 1;
+    border-radius: 5px;
+    transition: 0.25s ease-out;
+}
+
+@media (max-width: 700px) {
+    .tabs {
+        transform: scale(0.6);
+    }
+}
+
+#collection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    gap: 15px;
+    top: 100px;
+}
+
+#collection div {
+    flex-basis: 20%;
+}
+
+p {
+    overflow: hidden;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    width: 185px;
+    border-radius: 4px;
+}
+
+#collection img {
+    border-radius: 4px;
+    width: 200px;
+    height: 200px;
+}
+
+.heading {
+    margin-top: 40px;
+    font-family: Inter;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 19.36px;
+    text-align: center;
+    text-shadow: 0px 4px 4px #00000040;
+}
+
+
+#image,
+#image1,
+#image2 {
+    display: none;
+}
