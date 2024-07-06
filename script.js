@@ -58,9 +58,16 @@ var img = document.getElementById("image")
 var img1 = document.getElementById("image1")
 var img2 = document.getElementById("image2")
 
+btn1.addEventListener('click',function(){
+    img.style.display="inline";
+    img1.style.display="none";
+    img2.style.display="none"
+})
+
 btn2.addEventListener('click',function(){
     img.style.display="none";
     img1.style.display="inline";
+    img2.style.display="none"
 })
 
 btn3.addEventListener('click',function(){
